@@ -44,3 +44,23 @@ Thu 21 Mar 2024 06:12:07 PM UTC:
  tests:  2|3
 total_score: 20/70
 6318541
+Thu 21 Mar 2024 06:16:05 PM UTC: 
+ exercises.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:75:28: error: invalid use of undefined type ‘struct List’
+   75 |     int *dato = (int*)lista[i]
+      |                            ^
+exercises.c:75:23: error: invalid use of incomplete typedef ‘List’
+   75 |     int *dato = (int*)lista[i]
+      |                       ^~~~~
+exercises.c:76:5: error: expected ‘,’ or ‘;’ before ‘if’
+   76 |     if(*dato == elem) {
+      |     ^~
+exercises.c:75:10: error: unused variable ‘dato’ [-Werror=unused-variable]
+   75 |     int *dato = (int*)lista[i]
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9089134
