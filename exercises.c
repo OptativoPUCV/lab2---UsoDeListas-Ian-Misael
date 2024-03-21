@@ -69,8 +69,17 @@ Ejercicio 3.
 Crea una función que reciba una lista de punteros a int (int*) y un entero elem. La función debe eliminar todos los elementos de la lista que sean iguales a elem. Asume que popCurrent luego de eliminar un elemento se posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*lista, int elem){
-  
+void eliminaElementos(List *lista, int elem){
+  int largo = get_size(lista);
+  for(int i = 0 ; i < largo ; i++) {
+    int *dato = (int*)first(lista);
+    if(*dato == elem) {
+      popCurrent(lista);
+    }
+    else {
+      dato = (int*)next(lista);
+    }
+  }
 }
 
 /*
