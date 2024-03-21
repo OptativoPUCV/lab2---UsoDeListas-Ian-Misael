@@ -170,3 +170,31 @@ exercises.c:120:29: error: suggest parentheses around ‘&&’ within ‘||’ [
 cc1: all warnings being treated as errors
 Compilation failed
 7799fb9
+Thu 21 Mar 2024 07:47:02 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:30: error: ‘plia’ undeclared (first use in this function); did you mean ‘pila’?
+  115 |       cadena[i] == '{') push(plia, &cadena[i]);
+      |                              ^~~~
+      |                              pila
+exercises.c:115:30: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:118:38: error: comparison between pointer and integer [-Werror]
+  118 |       if (cadena[i] == ')' && ultimo == '('
+      |                                      ^~
+exercises.c:119:39: error: comparison between pointer and integer [-Werror]
+  119 |         || cadena[i] == ']' && ultimo == '['
+      |                                       ^~
+exercises.c:118:28: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  118 |       if (cadena[i] == ')' && ultimo == '('
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+exercises.c:120:39: error: comparison between pointer and integer [-Werror]
+  120 |         || cadena[i] == '}' && ultimo == '{') return 0;
+      |                                       ^~
+exercises.c:120:29: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  120 |         || cadena[i] == '}' && ultimo == '{') return 0;
+      |            ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+18c3b8e
