@@ -70,15 +70,10 @@ Crea una función que reciba una lista de punteros a int (int*) y un entero elem
 */
 
 void eliminaElementos(List *lista, int elem){
-  int *dato;
-  dato = (int*)first(lista);
+  int *dato = (int*)first(lista);
   while(dato != NULL) {
-    if(*dato == elem) {
-      popCurrent(lista);
-      
-    }
+    if(*dato == elem) popCurrent(lista);
     dato = (int*)next(lista);
-    
   }
 }
 
