@@ -35,10 +35,7 @@ void imprime_y_vacia_pila(Stack *P) {
 
 /* 
 Ejercicio 1.
-Crea una Lista y agrega punteros a elementos del 1 al 10.
-Recuerda que la lista almacena punteros, por lo que
-debes reservar memoria para cada elemento que agregues.
-Al finalizar retorna la lista creada.
+Crea una Lista y agrega punteros a elementos del 1 al 10. Recuerda que la lista almacena punteros, por lo que debes reservar memoria para cada elemento que agregues. Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
@@ -53,20 +50,17 @@ List* crea_lista() {
 
 /*
 Ejercicio 2.
-Crea una función que reciba una lista de enteros (int*) y 
-retorne la suma de sus elementos.
+Crea una función que reciba una lista de enteros (int*) y retorne la suma de sus elementos.
 */
-int sumaLista(List *L) {
-   return 0;
+
+int sumaLista(List *lista) {
+  int suma = 0;
+  return suma;
 }
 
 /*
 Ejercicio 3.
-Crea una función que reciba una lista de punteros a int (int*) y
-un entero elem. La función debe eliminar todos los elementos 
-de la lista que sean iguales a elem.
-Asume que popCurrent luego de eliminar un elemento se
-posiciona en el elemento anterior.
+Crea una función que reciba una lista de punteros a int (int*) y un entero elem. La función debe eliminar todos los elementos de la lista que sean iguales a elem. Asume que popCurrent luego de eliminar un elemento se posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List*L, int elem){
