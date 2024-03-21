@@ -90,13 +90,14 @@ La función copia los punteros de la pila P1 en la pila P2. El orden de ambas pi
 void copia_pila(Stack* P1, Stack* P2) 
 {
   Stack* PAux = create_stack();
-  void* dato;
-  while((dato = pop(P1) != NULL)) {
-    push(PAux, dato); 
+  int *dato;
+  while((dato = pop(P1)) != NULL) {
+    push(PAux, dato);
   }
-  while((dato = pop(PAux) != NULL)) {
+  while((dato = pop(PAux)) != NULL) {
     push(P2, dato);
   }
+  
 }
 
 /*
@@ -104,7 +105,8 @@ Ejercicio 5.
 La función verifica si la cadena de entrada tiene sus paraéntesis balanceados. Retorna 1 si están balanceados, 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
+int parentesisBalanceados(char *cadena) 
+{
    return 0;
 }
 
