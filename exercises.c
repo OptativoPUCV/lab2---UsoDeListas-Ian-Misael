@@ -90,9 +90,11 @@ La función copia los punteros de la pila P1 en la pila P2. El orden de ambas pi
 void copia_pila(Stack* P1, Stack* P2) 
 {
   Stack* PAux = create_stack();
-  int *dato;
-  while((dato = pop(P1)) != NULL) {
+  int *dato = (int*)first(P1);
+  
+  while((dato != NULL) {
     push(PAux, dato);
+      dato = (int*)next(P1);
   }
   while((dato = pop(PAux)) != NULL) {
     push(P2, dato);

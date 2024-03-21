@@ -102,3 +102,21 @@ Thu 21 Mar 2024 07:34:27 PM UTC:
  tests:  3|2
 total_score: 40/70
 99d924e
+Thu 21 Mar 2024 07:36:33 PM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:95:23: error: expected ‘)’ before ‘{’ token
+   95 |   while((dato != NULL) {
+      |        ~              ^~
+      |                       )
+exercises.c:103:1: error: expected expression before ‘}’ token
+  103 | }
+      | ^
+exercises.c:92:10: error: unused variable ‘PAux’ [-Werror=unused-variable]
+   92 |   Stack* PAux = create_stack();
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+aa14aef
