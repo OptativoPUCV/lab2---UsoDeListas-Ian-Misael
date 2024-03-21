@@ -99,7 +99,6 @@ void copia_pila(Stack* P1, Stack* P2)
   while((dato = pop(PAux)) != NULL) {
     push(P2, dato);
   }
-  
 }
 
 /*
@@ -109,6 +108,20 @@ La función verifica si la cadena de entrada tiene sus paraéntesis balanceados.
 
 int parentesisBalanceados(char *cadena) 
 {
-   return 0;
+  Stack* pila = create_stack();
+  for (int i = 0 ; cadena[i] != '\0' ; i++) {
+    if (cadena[i] == '(' || 
+      cadena[i] == '[' || 
+      cadena[i] == '{') push(plia, &cadena[i]);
+    else {
+      char ultimo = top(pila);
+      if (cadena[i] == ')' && ultimo == '(') 
+        || cadena[i] == ']' && ultimo == '[' 
+        || cadena[i] == '}' && ultimo == '{') return 0;
+      pop(pila);
+    }
+  }
+  if (top(pila) != NULL) return 0;
+   return 1;
 }
 

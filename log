@@ -126,3 +126,25 @@ Thu 21 Mar 2024 07:38:16 PM UTC:
  tests:  4|1
 total_score: 50/70
 63b02e2
+Thu 21 Mar 2024 07:46:05 PM UTC: 
+ exercises.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:115:30: error: ‘plia’ undeclared (first use in this function); did you mean ‘pila’?
+  115 |       cadena[i] == '{') push(plia, &cadena[i]);
+      |                              ^~~~
+      |                              pila
+exercises.c:115:30: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:117:21: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  117 |       char ultimo = top(pila);
+      |                     ^~~
+exercises.c:119:9: error: expected expression before ‘||’ token
+  119 |         || cadena[i] == ']' && ultimo == '['
+      |         ^~
+exercises.c:120:45: error: expected statement before ‘)’ token
+  120 |         || cadena[i] == '}' && ultimo == '{') return 0;
+      |                                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+05182da
